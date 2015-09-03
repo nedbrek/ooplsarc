@@ -1,19 +1,13 @@
 FILES :=
 
+CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
 LDFLAGS    := -lgtest -lgtest_main -pthread
+GCOV       := gcov-4.8
+GCOVFLAGS  := -fprofile-arcs -ftest-coverage
 GPROF      := gprof
 GPROFFLAGS := -pg
 VALGRIND   := valgrind
-
-ifeq ($(CXX), clang++)
-    GCOV      := gcov-4.6
-    GCOVFLAGS := --coverage
-else
-    CXX       := g++-4.8
-    GCOV      := gcov-4.8
-    GCOVFLAGS := -fprofile-arcs -ftest-coverage
-endif
 
 %.appx: %.c++
 	$(CXX) $(CXXFLAGS) $< -o $@ $(LDFLAGS)
