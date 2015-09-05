@@ -4,6 +4,7 @@
 
 // https://code.google.com/p/googletest/
 // https://code.google.com/p/googletest/wiki/Primer#Assertions
+// https://code.google.com/p/googletest/wiki/AdvancedGuide#Exception_Assertions
 
 #include <cassert>  // assert
 #include <iostream> // cout, endl
