@@ -4,8 +4,15 @@ FILES :=              \
     Coverage1         \
     Coverage2         \
     Coverage3         \
+    Exceptions        \
+    Exceptions2       \
+    Exceptions3       \
+    Types             \
+    TypeAliases       \
+    Auto              \
+    Consts            \
+    Consts2
 
-#    Exceptions        \
 #    Types             \
 #    Functions         \
 #    AbstractClasses   \

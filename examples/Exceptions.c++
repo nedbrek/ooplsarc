@@ -10,13 +10,14 @@
 #include <stdexcept> // domain_error
 #include <string>    // string
 
+using namespace std;
+
 int f (bool b) {
     if (b)
-        throw std::domain_error("abc");
+        throw domain_error("abc");
     return 0;}
 
 int main () {
-    using namespace std;
     cout << "Exceptions.c++" << endl;
 
     try {
@@ -26,7 +27,7 @@ int main () {
         assert(false);}
 
     try {
-        assert(f(true) == 1);
+        f(true);
         assert(false);
         }
     catch (domain_error& e) {

@@ -9,12 +9,13 @@
 #include <exception> // exception
 #include <iostream>  // cout, endl;
 
-struct My_Exception : std::exception {
+using namespace std;
+
+struct My_Exception : exception {
     const char* what () const throw () {
         return "My_Exception";}};
 
 int main () {
-    using namespace std;
     cout << "Exceptions3.c++" << endl;
 
     My_Exception x;
