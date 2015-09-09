@@ -73,7 +73,11 @@ int main () {
 
     {
     function<int (int)> f = [] (int i) -> int {return i + 1;};
-    assert(sizeof(f) == 48);
+    #ifdef __APPLE__
+        assert(sizeof(f) == 48);
+    #elif
+        cout << sizeof(f) << endl;
+    #endif
     }
 
     {
