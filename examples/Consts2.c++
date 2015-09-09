@@ -13,7 +13,7 @@ int main () {
     // mutable reference, mutable int, mutable pointer
     {
     int i = 2;
-    typedef int* pointer;
+    using pointer = int*;
     pointer  p = &i;
     pointer& r = p;
     ++*r;
@@ -26,7 +26,7 @@ int main () {
     // immutable reference, mutable int, mutable pointer
     {
     int i = 2;
-    typedef int* pointer;
+    using pointer = int*;
           pointer  p = &i;
     const pointer& r = p;
     ++*r;
@@ -40,7 +40,7 @@ int main () {
     // mutable reference, immutable int, mutable pointer
     {
     int i = 2;
-    typedef const int* pointer_to_constant;
+    using pointer_to_constant = const int*;
     pointer_to_constant  p = &i;
     pointer_to_constant& r = p;
 //  ++*r;                                   // error: increment of read-only location
@@ -53,7 +53,7 @@ int main () {
     // immutable reference, immutable int, mutable pointer
     {
     int i = 2;
-    typedef const int* pointer_to_constant;
+    using pointer_to_constant = const int*;
           pointer_to_constant  p = &i;
     const pointer_to_constant& r = p;
 //  ++*r;                                   // error: increment of read-only location
@@ -67,7 +67,7 @@ int main () {
     // mutable reference, mutable int, immmutable pointer
     {
     int i = 2;
-    typedef int* const constant_pointer;
+    using constant_pointer = int* const;
     constant_pointer  p = &i;
     constant_pointer& r = p;
     ++*r;
@@ -80,7 +80,7 @@ int main () {
     // mutable reference, immutable int, immmutable pointer
     {
     int i = 2;
-    typedef const int* const constant_pointer_to_constant;
+    using constant_pointer_to_constant = const int* const;
     constant_pointer_to_constant  p = &i;
     constant_pointer_to_constant& r = p;
     assert(&r == &p);
@@ -93,8 +93,8 @@ int main () {
     // reference to read-only,  many-location pointer referring to read/write, many-location pointer
     {
     int i = 2;
-    typedef       int* pointer;
-    typedef const int* pointer_to_constant;
+    using pointer             = int*;
+//  using pointer_to_constant = const int*;
     pointer              p  = &i;
 //  pointer_to_constant& r  = p;            // error: invalid initialization of reference of type ‘const int*&’ from expression of type ‘int*’
     assert(p == &i);
