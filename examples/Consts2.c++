@@ -83,6 +83,7 @@ int main () {
     typedef const int* const constant_pointer_to_constant;
     constant_pointer_to_constant  p = &i;
     constant_pointer_to_constant& r = p;
+    assert(&r == &p);
 //  ++*r;                                                  // error: increment of read-only location
 //  ++*p;                                                  // error: increment of read-only location
 //  r = 0;                                                 // error: assignment of read-only reference 'r'
@@ -96,6 +97,7 @@ int main () {
     typedef const int* pointer_to_constant;
     pointer              p  = &i;
 //  pointer_to_constant& r  = p;            // error: invalid initialization of reference of type ‘const int*&’ from expression of type ‘int*’
+    assert(p == &i);
     }
 
     cout << "Done." << endl;

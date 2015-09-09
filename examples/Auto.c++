@@ -76,7 +76,7 @@ int main () {
     #ifdef __APPLE__
         assert(sizeof(f) == 48);
     #else
-        cout << sizeof(f) << endl;
+        assert(sizeof(f) == 32);
     #endif
     }
 

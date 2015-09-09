@@ -34,6 +34,7 @@ pull:
     --include "Auto.c++"                    \
     --include "Consts.c++"                  \
     --include "Consts2.c++"                 \
+    --include "Arrays.c++"                  \
     --exclude "*"                           \
     ../../../examples/c++/ examples
 	@rsync -r -t -u -v --delete             \

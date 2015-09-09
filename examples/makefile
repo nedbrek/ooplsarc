@@ -11,7 +11,8 @@ FILES :=              \
     TypeAliases       \
     Auto              \
     Consts            \
-    Consts2
+    Consts2           \
+    Arrays
 
 #    Types             \
 #    Functions         \
