@@ -8,7 +8,15 @@ FILES :=              \
     Exceptions2       \
     Exceptions3       \
     Types             \
+    Representations   \
+    Variables         \
+    Operators         \
+    StackVsHeap       \
+    Valgrind          \
+    Selection         \
+    Iteration         \
     TypeAliases       \
+    Initializations   \
     Auto              \
     Consts            \
     Consts2           \

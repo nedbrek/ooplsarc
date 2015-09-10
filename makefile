@@ -30,7 +30,15 @@ pull:
     --include "Exceptions2.c++"             \
     --include "Exceptions3.c++"             \
     --include "Types.c++"                   \
+    --include "Representations.c++"         \
+    --include "Variables.c++"               \
+    --include "Operators.c++"               \
+    --include "StackVsHeap.c++"             \
+    --include "Valgrind.c++"                \
+    --include "Selection.c++"               \
+    --include "Iteration.c++"               \
     --include "TypeAliases.c++"             \
+    --include "Initializations.c++"         \
     --include "Auto.c++"                    \
     --include "Consts.c++"                  \
     --include "Consts2.c++"                 \
@@ -42,13 +50,11 @@ pull:
     --include "IsPrime1.c++"                \
     --include "IsPrime2.h"                  \
     --include "IsPrime2.c++"                \
+    --include "Incr.h"                      \
+    --include "Incr.c++"                    \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 
-#    --include "Operators.c++"               \
-#    --include "StackVsHeap.c++"             \
-#    --include "Selection.c++"               \
-#    --include "Iteration.c++"               \
 #    --include "Variables.c++"               \
 #    --include "Lambdas.c++"                 \
 #    --include "Iterators.c++"               \
