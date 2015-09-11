@@ -21,7 +21,11 @@ int main () {
     }
 
     {
-    int* a = new int[12345678912345L]; // 123456789123456L will fail
+    #ifdef __APPLE__
+        int* a = new int[12345678912345L]; // 123456789123456L will fail
+    #else
+        int* a = new int[1234567891234L];  // 12345678912345L will fail
+    #endif
     assert(a == a);
     }
 

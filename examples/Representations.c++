@@ -126,7 +126,7 @@ int main () {
 
     {
     float f = 2;
-    int   i = *(reinterpret_cast<int*>(&f));                    // sign: 0, exponent: 1+127=128, mantissa: 1.0
+    int   i = *(reinterpret_cast<int*>(&f));                      // sign: 0, exponent: 1+127=128, mantissa: 1.0
     ostringstream out;
     out << f << " " << i << " " << oct << i << " " << hex << i;
     assert(out.str() == "2 1073741824 10000000000 40000000");
@@ -134,7 +134,7 @@ int main () {
 
     {
     float f = 2;
-    int   i = reinterpret_cast<int&>(f);                        // sign: 0, exponent: 1+127=128, mantissa: 1.0
+    int   i = reinterpret_cast<int&>(f);                          // sign: 0, exponent: 1+127=128, mantissa: 1.0
     ostringstream out;
     out << f << " " << i << " " << oct << i << " " << hex << i;
     assert(out.str() == "2 1073741824 10000000000 40000000");
@@ -142,7 +142,7 @@ int main () {
 
     {
     float f = -2;
-    int   i = *(reinterpret_cast<int*>(&f));                    // sign: 1, exponent: 1+127=128, mantissa: 1.0
+    int   i = *(reinterpret_cast<int*>(&f));                      // sign: 1, exponent: 1+127=128, mantissa: 1.0
     ostringstream out;
     out << f << " " << i << " " << oct << i << " " << hex << i;
     assert(out.str() == "-2 -1073741824 30000000000 c0000000");
@@ -150,7 +150,7 @@ int main () {
 
     {
     float f = 2.5f;
-    int   i = *(reinterpret_cast<int*>(&f));                    // sign: 0, exponent: 1+127=128, mantissa: 1.01
+    int   i = *(reinterpret_cast<int*>(&f));                      // sign: 0, exponent: 1+127=128, mantissa: 1.01
     ostringstream out;
     out << f << " " << i << " " << oct << i << " " << hex << i;
     assert(out.str() == "2.5 1075838976 10010000000 40200000");
@@ -165,8 +165,8 @@ int main () {
     }
 
     {
-    float f = 1.0 / 0;                                          // warning: division by zero in "1.0e+0 / 0"
-    int   i = *(reinterpret_cast<int*>(&f));                    // sign: 0, exponent: 255, mantissa: 1.0
+    float f = 1.0 / 0;                                            // warning: division by zero in "1.0e+0 / 0"
+    int   i = *(reinterpret_cast<int*>(&f));                      // sign: 0, exponent: 255, mantissa: 1.0
     ostringstream out;
     out << f << " " << i << " " << oct << i << " " << hex << i;
     assert(out.str() == "inf 2139095040 17740000000 7f800000");
@@ -174,7 +174,7 @@ int main () {
 
     {
     float f = log(0);
-    int   i = *(reinterpret_cast<int*>(&f));                    // sign: 1, exponent: 255, mantissa: 1.0
+    int   i = *(reinterpret_cast<int*>(&f));                      // sign: 1, exponent: 255, mantissa: 1.0
     ostringstream out;
     out << f << " " << i << " " << oct << i << " " << hex << i;
     assert(out.str() == "-inf -8388608 37740000000 ff800000");
@@ -182,13 +182,13 @@ int main () {
 
     {
     float f = sqrt(-1);
-    int   i = *(reinterpret_cast<int*>(&f));                    // sign: 0, exponent: 255, mantissa: 1.1
+    int   i = *(reinterpret_cast<int*>(&f));                      // sign: 0, exponent: 255, mantissa: 1.1
     ostringstream out;
-    cout << f << " " << i << " " << oct << i << " " << hex << i;
+    out << f << " " << i << " " << oct << i << " " << hex << i;
     #ifdef __APPLE__
-//    assert(out.str() == "nan -4194304 37760000000 ffc00000");
+        assert(out.str() ==  "nan -4194304 37760000000 ffc00000");
     #else
-//    assert(out.str() == "nan -4194304 37760000000 ffc00000");
+        assert(out.str() == "-nan -4194304 37760000000 ffc00000");
     #endif
     }
 
