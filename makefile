@@ -18,8 +18,6 @@ pull:
 	@rsync -r -t -u -v --delete             \
     --include "Hello.c++"                   \
     --include "Assertions.c++"              \
-    --include "Collatz1.h"                  \
-    --include "Collatz2.h"                  \
     --include "UnitTests1.c++"              \
     --include "UnitTests2.c++"              \
     --include "UnitTests3.c++"              \
@@ -46,14 +44,14 @@ pull:
     --exclude "*"                           \
     ../../../examples/c++/ examples
 	@rsync -r -t -u -v --delete             \
-    --include "IsPrime1.h"                  \
     --include "IsPrime1.c++"                \
-    --include "IsPrime2.h"                  \
+    --include "IsPrime1.h"                  \
     --include "IsPrime2.c++"                \
-    --include "StrCmp.h"                    \
+    --include "IsPrime2.h"                  \
     --include "StrCmp.c++"                  \
-    --include "Incr.h"                      \
+    --include "StrCmp.h"                    \
     --include "Incr.c++"                    \
+    --include "Incr.h"                      \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 

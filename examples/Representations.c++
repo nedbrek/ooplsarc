@@ -184,7 +184,7 @@ int main () {
     float f = sqrt(-1);
     int   i = *(reinterpret_cast<int*>(&f));                    // sign: 0, exponent: 255, mantissa: 1.1
     ostringstream out;
-    out << f << " " << i << " " << oct << i << " " << hex << i;
+    cout << f << " " << i << " " << oct << i << " " << hex << i;
     assert(out.str() == "nan -4194304 37760000000 ffc00000");
     }
 
