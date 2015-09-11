@@ -185,7 +185,11 @@ int main () {
     int   i = *(reinterpret_cast<int*>(&f));                    // sign: 0, exponent: 255, mantissa: 1.1
     ostringstream out;
     cout << f << " " << i << " " << oct << i << " " << hex << i;
-    assert(out.str() == "nan -4194304 37760000000 ffc00000");
+    #ifdef __APPLE__
+#    assert(out.str() == "nan -4194304 37760000000 ffc00000");
+    #else
+#    assert(out.str() == "nan -4194304 37760000000 ffc00000");
+    #endif
     }
 
     cout << "Done." << endl;
