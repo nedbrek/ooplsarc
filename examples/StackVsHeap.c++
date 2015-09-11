@@ -24,7 +24,6 @@ int main () {
     #ifdef __APPLE__
         int* a = new int[12345678912345L]; // 123456789123456L will fail
     #else
-        cout << 1234567891L << endl;
         int* a = new int[1234567891L];     // 12345678912L will fail
     #endif
     assert(a == a);
