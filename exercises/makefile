@@ -1,6 +1,7 @@
 FILES :=     \
     IsPrime1 \
     IsPrime2 \
+    StrCmp   \
     Incr
 
 CXX        := g++-4.8
