@@ -186,9 +186,9 @@ int main () {
     ostringstream out;
     cout << f << " " << i << " " << oct << i << " " << hex << i;
     #ifdef __APPLE__
-#    assert(out.str() == "nan -4194304 37760000000 ffc00000");
+//    assert(out.str() == "nan -4194304 37760000000 ffc00000");
     #else
-#    assert(out.str() == "nan -4194304 37760000000 ffc00000");
+//    assert(out.str() == "nan -4194304 37760000000 ffc00000");
     #endif
     }
 
