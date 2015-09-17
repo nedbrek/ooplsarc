@@ -236,6 +236,21 @@ int main () {
     }
 
     {
+    int  i = 8;
+    bool j = !(i & (i - 1));
+    assert(j == true);       // power of 2
+    }
+
+    {
+    int i = 13;       // 1101
+    int j =  0;
+    while (i != 0) {
+        i &= (i - 1);
+        ++j;}
+    assert(j == 3);   // number of bits
+    }
+
+    {
     bool a = true;
     bool b = true;
     bool c = false;

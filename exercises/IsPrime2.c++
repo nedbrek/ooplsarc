@@ -4,9 +4,6 @@
 
 // https://en.wikipedia.org/wiki/Primality_test
 
-#include <cassert>  // assert
-#include <iostream> // cout, endl
-
 #include "gtest/gtest.h"
 
 #include "IsPrime2.h"
@@ -39,6 +36,10 @@ TEST(Is_Prime_Fixture, test_29) {
     ASSERT_TRUE(is_prime(29));}
 
 /*
+% g++ -pedantic -std=c++11 -Wall IsPrime2.c++ -o IsPrime2 -lgtest_main
+
+
+
 % IsPrime2
 Running main() from gtest_main.cc
 [==========] Running 9 tests from 1 test case.
@@ -67,6 +68,8 @@ Running main() from gtest_main.cc
 [----------] Global test environment tear-down
 [==========] 9 tests from 1 test case ran. (1 ms total)
 [  PASSED  ] 9 tests.
+
+
 
 % gcov -b ./IsPrime2.c++ | grep -A 5 "File 'IsPrime2.c++'"
 File 'IsPrime2.c++'
