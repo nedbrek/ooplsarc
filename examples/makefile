@@ -8,9 +8,9 @@ FILES :=              \
     Exceptions2       \
     Exceptions3       \
     Types             \
+    Operators         \
     Representations   \
     Variables         \
-    Operators         \
     StackVsHeap       \
     Valgrind          \
     Selection         \

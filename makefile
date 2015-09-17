@@ -28,9 +28,9 @@ pull:
     --include "Exceptions2.c++"             \
     --include "Exceptions3.c++"             \
     --include "Types.c++"                   \
+    --include "Operators.c++"               \
     --include "Representations.c++"         \
     --include "Variables.c++"               \
-    --include "Operators.c++"               \
     --include "StackVsHeap.c++"             \
     --include "Valgrind.c++"                \
     --include "Selection.c++"               \
@@ -52,6 +52,8 @@ pull:
     --include "StrCmp.h"                    \
     --include "Incr.c++"                    \
     --include "Incr.h"                      \
+    --include "Equal.h"                     \
+    --include "Equal.c++"                   \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 
@@ -62,12 +64,8 @@ pull:
 #    --include "Sets.c++"                    \
 #    --include "Maps.c++"                    \
 
-#    --include "StrCmp.h"                    \
-#    --include "StrCmp.c++"                  \
 #    --include "Factorial.h"                 \
 #    --include "Factorial.c++"               \
-#    --include "Equal.h"                     \
-#    --include "Equal.c++"                   \
 #    --include "Fill.h"                      \
 #    --include "Fill.c++"                    \
 #    --include "Copy.h"                      \
