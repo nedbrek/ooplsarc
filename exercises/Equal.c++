@@ -95,6 +95,10 @@ TEST_P(Equal_List_Fixture, test_2) {
 	ASSERT_FALSE(GetParam()(_x.begin(), _x.end(), ++_y.begin()));}
 
 /*
+% g++ -pedantic -std=c++11 -Wall Equal.c++ -o Equal -lgtest_main
+
+
+
 % Equal
 Running main() from gtest_main.cc
 [==========] Running 12 tests from 3 test cases.

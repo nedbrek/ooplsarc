@@ -54,14 +54,4 @@ Running main() from gtest_main.cc
 [----------] Global test environment tear-down
 [==========] 4 tests from 1 test case ran. (0 ms total)
 [  PASSED  ] 4 tests.
-
-
-
-% gcov -b Incr.c++ | grep -A 5 "File 'Incr.c++'"
-File 'Incr.c++'
-Lines executed:100.00% of 18
-Branches executed:50.44% of 113
-Taken at least once:22.12% of 113
-No calls
-Incr.c++:creating 'Incr.c++.gcov'
 */
