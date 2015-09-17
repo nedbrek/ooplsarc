@@ -23,8 +23,8 @@ INSTANTIATE_TEST_CASE_P (
     Str_Cmp_Instantiation,
     Str_Cmp_Fixture,
     Values(
-        my_strcmp,
-           strcmp));
+           strcmp,
+        my_strcmp));
 
 TEST_P (Str_Cmp_Fixture, test_1) {
 	ASSERT_EQ(GetParam()("abc", "abc"), 0);}

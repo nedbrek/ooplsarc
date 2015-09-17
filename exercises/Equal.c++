@@ -40,7 +40,7 @@ TEST_P(Equal_Array_Fixture, test_1) {
 	ASSERT_TRUE(GetParam()(_a, _a + 3, _b));}
 
 TEST_P(Equal_Array_Fixture, test_2) {
-	ASSERT_FALSE(GetParam()(_a, _a + 3, _b + 1));}
+	ASSERT_FALSE(GetParam()(_a, _a + 2, _b + 1));}
 
 
 
@@ -66,7 +66,7 @@ TEST_P(Equal_Vector_Fixture, test_1) {
 	ASSERT_TRUE(GetParam()(_x.begin(), _x.end(), _y.begin()));}
 
 TEST_P(Equal_Vector_Fixture, test_2) {
-	ASSERT_FALSE(GetParam()(_x.begin(), _x.end(), _y.begin() + 1));}
+	ASSERT_FALSE(GetParam()(_x.begin(), _x.begin() + 1, _y.begin() + 1));}
 
 
 
@@ -92,7 +92,9 @@ TEST_P(Equal_List_Fixture, test_1) {
 	ASSERT_TRUE(GetParam()(_x.begin(), _x.end(), _y.begin()));}
 
 TEST_P(Equal_List_Fixture, test_2) {
-	ASSERT_FALSE(GetParam()(_x.begin(), _x.end(), ++_y.begin()));}
+    auto b1 = _x.begin();
+    auto b2 = _y.begin();
+	ASSERT_FALSE(GetParam()(_x.begin(), ++b1, ++b2));}
 
 /*
 % g++ -pedantic -std=c++11 -Wall Equal.c++ -o Equal -lgtest_main
