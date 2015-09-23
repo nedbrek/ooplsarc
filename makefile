@@ -31,6 +31,8 @@ pull:
     --include "Operators.c++"               \
     --include "Representations.c++"         \
     --include "Variables.c++"               \
+    --include "Arguments.c++"               \
+    --include "Returns.c++"                 \
     --include "Selection.c++"               \
     --include "Iteration.c++"               \
     --include "StackVsHeap.c++"             \
