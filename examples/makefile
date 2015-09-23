@@ -11,9 +11,9 @@ FILES :=              \
     Operators         \
     Representations   \
     Variables         \
+    Selection         \
     StackVsHeap       \
     Valgrind          \
-    Selection         \
     Iteration         \
     TypeAliases       \
     Initializations   \
@@ -21,15 +21,6 @@ FILES :=              \
     Consts            \
     Consts2           \
     Arrays
-
-#    Types             \
-#    Functions         \
-#    AbstractClasses   \
-#    Handle1           \
-#    Handle2           \
-#    Handle3           \
-#    MethodOverriding1 \
-#    MethodOverriding2
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
