@@ -11,6 +11,9 @@ FILES :=              \
     Operators         \
     Representations   \
     Variables         \
+    Arguments         \
+    Cache             \
+    Returns           \
     Selection         \
     StackVsHeap       \
     Valgrind          \

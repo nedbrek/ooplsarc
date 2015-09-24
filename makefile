@@ -30,8 +30,10 @@ pull:
     --include "Types.c++"                   \
     --include "Operators.c++"               \
     --include "Representations.c++"         \
+    --include "Cache.c++"                   \
     --include "Variables.c++"               \
     --include "Arguments.c++"               \
+    --include "Cache.c++"                   \
     --include "Returns.c++"                 \
     --include "Selection.c++"               \
     --include "Iteration.c++"               \
