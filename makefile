@@ -39,12 +39,12 @@ pull:
     --include "Iteration.c++"               \
     --include "StackVsHeap.c++"             \
     --include "Valgrind.c++"                \
-    --include "TypeAliases.c++"             \
-    --include "Initializations.c++"         \
-    --include "Auto.c++"                    \
     --include "Consts.c++"                  \
     --include "Consts2.c++"                 \
     --include "Arrays.c++"                  \
+    --include "TypeAliases.c++"             \
+    --include "Initializations.c++"         \
+    --include "Auto.c++"                    \
     --exclude "*"                           \
     ../../../examples/c++/ examples
 	@rsync -r -t -u -v --delete             \

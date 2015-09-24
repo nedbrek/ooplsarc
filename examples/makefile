@@ -18,12 +18,12 @@ FILES :=              \
     StackVsHeap       \
     Valgrind          \
     Iteration         \
-    TypeAliases       \
-    Initializations   \
-    Auto              \
     Consts            \
     Consts2           \
-    Arrays
+    Arrays            \
+    TypeAliases       \
+    Initializations   \
+    Auto
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
