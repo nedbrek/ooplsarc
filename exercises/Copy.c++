@@ -4,11 +4,12 @@
 
 // http://www.cplusplus.com/reference/algorithm/copy/
 
-#include <algorithm> // copy, equal
-#include <cassert>   // assert
-#include <iostream>  // cout, endl
-#include <list>      // list
-#include <vector>    // vector
+#include <algorithm>  // copy, equal
+#include <cassert>    // assert
+#include <functional> // function
+#include <iostream>   // cout, endl
+#include <list>       // list
+#include <vector>     // vector
 
 #include "gtest/gtest.h"
 
