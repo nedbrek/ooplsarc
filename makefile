@@ -62,6 +62,8 @@ pull:
     --include "Copy.c++"                    \
     --include "Fill.h"                      \
     --include "Fill.c++"                    \
+    --include "AllOf.h"                     \
+    --include "AllOf.c++"                   \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 

@@ -2,8 +2,6 @@
 // Fill.h
 // ------
 
-// http://www.cplusplus.com/reference/algorithm/fill/
-
 #ifndef Fill_h
 #define Fill_h
 

@@ -17,7 +17,7 @@ using namespace std;
 using testing::TestWithParam;
 using testing::Values;
 
-using Fill_List_Signature = std::function<void (list<int>::iterator, list<int>::iterator, const int&)>;
+using Fill_List_Signature = function<void (list<int>::iterator, list<int>::iterator, const int&)>;
 
 struct Fill_List_Fixture : TestWithParam<Fill_List_Signature>
     {};

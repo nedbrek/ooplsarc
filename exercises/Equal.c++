@@ -18,11 +18,11 @@ using namespace std;
 using testing::TestWithParam;
 using testing::Values;
 
-using Equal_List_Signature = function<bool (list<int>::const_iterator, list<int>::const_iterator, list<int>::const_iterator)>;
+using Equal_List_Signature = function<bool (list<int>::const_iterator, list<int>::const_iterator, vector<int>::const_iterator)>;
 
 struct Equal_List_Fixture : TestWithParam<Equal_List_Signature> {
-    const list<int> _x;
-    const list<int> _y;
+    const list<int>   _x;
+    const vector<int> _y;
 
     Equal_List_Fixture () :
             _x {2, 3, 4},
@@ -33,8 +33,8 @@ INSTANTIATE_TEST_CASE_P(
     Equal_List_Instantiation,
     Equal_List_Fixture,
     Values(
-           equal<list<int>::const_iterator, list<int>::const_iterator>,
-        my_equal<list<int>::const_iterator, list<int>::const_iterator>));
+           equal<list<int>::const_iterator, vector<int>::const_iterator>,
+        my_equal<list<int>::const_iterator, vector<int>::const_iterator>));
 
 TEST_P(Equal_List_Fixture, test) {
 	ASSERT_TRUE(GetParam()(_x.begin(), _x.end(), _y.begin()));}

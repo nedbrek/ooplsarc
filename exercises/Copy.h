@@ -2,8 +2,6 @@
 // Copy.h
 // ------
 
-// http://www.cplusplus.com/reference/algorithm/copy/
-
 #ifndef Copy_h
 #define Copy_h
 

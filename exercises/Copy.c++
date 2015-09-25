@@ -20,7 +20,7 @@ using namespace std;
 using testing::TestWithParam;
 using testing::Values;
 
-using Copy_List_Signature = std::function<vector<int>::iterator (list<int>::const_iterator, list<int>::const_iterator, vector<int>::iterator)>;
+using Copy_List_Signature = function<vector<int>::iterator (list<int>::const_iterator, list<int>::const_iterator, vector<int>::iterator)>;
 
 struct Copy_List_Fixture : TestWithParam<Copy_List_Signature>
     {};
@@ -36,7 +36,7 @@ TEST_P(Copy_List_Fixture, test) {
     const list<int>       x = {2, 3, 4};
     vector<int>           y(5);
     vector<int>::iterator p = GetParam()(x.begin(), x.end(), y.begin() + 1);
-    assert(p == y.begin() + 4);
+    ASSERT_EQ(p, y.begin() + 4);
     ASSERT_TRUE(equal(x.begin(), x.end(), y.begin() + 1));}
 
 /*
