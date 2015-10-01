@@ -59,13 +59,21 @@ int main () {
     assert(numeric_limits<unsigned int>::min() ==  0);
     assert(numeric_limits<unsigned int>::max() ==  4294967295U);
 
-    long j = 2L;
-    assert(sizeof(j)    ==  8);
+    long l = 2L;
+    assert(sizeof(l)    ==  8);
     assert(sizeof(long) ==  8);
     assert(numeric_limits<         long>::min() == -9223372036854775807L - 1);
     assert(numeric_limits<         long>::max() ==  9223372036854775807L);
     assert(numeric_limits<unsigned long>::min() ==                    0);
     assert(numeric_limits<unsigned long>::max() == 18446744073709551615UL);
+
+    long long ll = 2LL;
+    assert(sizeof(ll)        ==  8);
+    assert(sizeof(long long) ==  8);
+    assert(numeric_limits<         long long>::min() == -9223372036854775807LL - 1);
+    assert(numeric_limits<         long long>::max() ==  9223372036854775807LL);
+    assert(numeric_limits<unsigned long long>::min() ==                    0);
+    assert(numeric_limits<unsigned long long>::max() == 18446744073709551615ULL);
 
     float f = 2.34F;
     assert(sizeof(f)     == 4);
