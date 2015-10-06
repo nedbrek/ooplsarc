@@ -38,6 +38,8 @@ pull:
     --include "Iteration.c++"               \
     --include "StackVsHeap.c++"             \
     --include "Valgrind.c++"                \
+    --include "Lambdas.c++"                 \
+    --include "Iterators.c++"               \
     --include "Consts.c++"                  \
     --include "Consts2.c++"                 \
     --include "Arrays.c++"                  \
@@ -63,8 +65,13 @@ pull:
     --include "Fill.c++"                    \
     --include "AllOf.h"                     \
     --include "AllOf.c++"                   \
+    --include "RangeIterator.c++"           \
+    --include "Range.c++"                   \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
+
+#    --include "RangeIterator.h"             \
+#    --include "Range.h"                     \
 
 push:
 	make clean

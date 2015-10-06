@@ -17,6 +17,7 @@ FILES :=              \
     Selection         \
     StackVsHeap       \
     Valgrind          \
+    Lambdas           \
     Iteration         \
     Consts            \
     Consts2           \

@@ -31,9 +31,13 @@ INSTANTIATE_TEST_CASE_P(
            all_of<list<int>::const_iterator, function<bool (int)>>,
         my_all_of<list<int>::const_iterator, function<bool (int)>>));
 
-TEST_P(AllOf_List_Fixture, test) {
+TEST_P(AllOf_List_Fixture, test_1) {
     const list<int>       x = {2, 4, 6};
     ASSERT_TRUE(GetParam()(x.begin(), x.end(), [] (int v) -> bool {return (v % 2) == 0;}));}
+
+TEST_P(AllOf_List_Fixture, test_2) {
+    const list<int>       x = {2, 3, 6};
+    ASSERT_FALSE(GetParam()(x.begin(), x.end(), [] (int v) -> bool {return (v % 2) == 0;}));}
 
 /*
 % g++ -pedantic -std=c++11 -Wall AllOf.c++ -o AllOf -lgtest_main
@@ -42,16 +46,20 @@ TEST_P(AllOf_List_Fixture, test) {
 
 % AllOf
 Running main() from gtest_main.cc
-[==========] Running 2 tests from 1 test case.
+[==========] Running 4 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 2 tests from AllOf_List_Instantiation/AllOf_List_Fixture
-[ RUN      ] AllOf_List_Instantiation/AllOf_List_Fixture.test/0
-[       OK ] AllOf_List_Instantiation/AllOf_List_Fixture.test/0 (0 ms)
-[ RUN      ] AllOf_List_Instantiation/AllOf_List_Fixture.test/1
-[       OK ] AllOf_List_Instantiation/AllOf_List_Fixture.test/1 (0 ms)
-[----------] 2 tests from AllOf_List_Instantiation/AllOf_List_Fixture (0 ms total)
+[----------] 4 tests from AllOf_List_Instantiation/AllOf_List_Fixture
+[ RUN      ] AllOf_List_Instantiation/AllOf_List_Fixture.test_1/0
+[       OK ] AllOf_List_Instantiation/AllOf_List_Fixture.test_1/0 (0 ms)
+[ RUN      ] AllOf_List_Instantiation/AllOf_List_Fixture.test_1/1
+[       OK ] AllOf_List_Instantiation/AllOf_List_Fixture.test_1/1 (0 ms)
+[ RUN      ] AllOf_List_Instantiation/AllOf_List_Fixture.test_2/0
+[       OK ] AllOf_List_Instantiation/AllOf_List_Fixture.test_2/0 (0 ms)
+[ RUN      ] AllOf_List_Instantiation/AllOf_List_Fixture.test_2/1
+[       OK ] AllOf_List_Instantiation/AllOf_List_Fixture.test_2/1 (0 ms)
+[----------] 4 tests from AllOf_List_Instantiation/AllOf_List_Fixture (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 2 tests from 1 test case ran. (1 ms total)
-[  PASSED  ] 2 tests.
+[==========] 4 tests from 1 test case ran. (1 ms total)
+[  PASSED  ] 4 tests.
 */
