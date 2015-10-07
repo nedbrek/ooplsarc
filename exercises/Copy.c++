@@ -35,9 +35,10 @@ INSTANTIATE_TEST_CASE_P(
 TEST_P(Copy_List_Fixture, test) {
     const list<int>       x = {2, 3, 4};
     vector<int>           y(5);
+    const list<int>       z = {0, 2, 3, 4, 0};
     vector<int>::iterator p = GetParam()(x.begin(), x.end(), y.begin() + 1);
     ASSERT_EQ(p, y.begin() + 4);
-    ASSERT_TRUE(equal(x.begin(), x.end(), y.begin() + 1));}
+    ASSERT_TRUE(equal(y.begin(), y.end(), z.begin()));}
 
 /*
 % g++ -pedantic -std=c++11 -Wall Copy.c++ -o Copy -lgtest_main

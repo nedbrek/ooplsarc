@@ -67,6 +67,7 @@ pull:
     --include "AllOf.c++"                   \
     --include "Accumulate.c++"              \
     --include "Accumulate.h"                \
+    --include "Transform.c++"               \
     --include "Transform.h"                 \
     --include "RangeIterator.c++"           \
     --include "Range.c++"                   \

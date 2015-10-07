@@ -7,7 +7,8 @@ FILES :=       \
     Copy       \
     Fill       \
     AllOf      \
-    Accumulate
+    Accumulate \
+    Transform
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
