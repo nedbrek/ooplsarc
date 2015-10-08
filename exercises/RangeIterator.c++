@@ -11,6 +11,15 @@
 
 using namespace std;
 
+/*
+    public:
+        using iterator_category = input_iterator_tag;
+        using value_type        = T;
+        using difference_type   = ptrdiff_t;
+        using pointer           = T*;
+        using reference         = T&;
+*/
+
 TEST(Range_Iterator_Fixture, test_1) {
     Range_Iterator<int> b = 2;
     Range_Iterator<int> e = 2;
