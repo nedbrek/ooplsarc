@@ -32,12 +32,12 @@ INSTANTIATE_TEST_CASE_P(
         my_all_of<list<int>::const_iterator, function<bool (int)>>));
 
 TEST_P(AllOf_List_Fixture, test_1) {
-    const list<int> x = {2, 4, 6};
-    ASSERT_TRUE(GetParam()(x.begin(), x.end(), [] (int v) -> bool {return (v % 2) == 0;}));}
+    const list<int> x = {3, 5, 7};
+    ASSERT_TRUE(GetParam()(x.begin(), x.end(), [] (int v) -> bool {return (v % 2);}));}
 
 TEST_P(AllOf_List_Fixture, test_2) {
-    const list<int> x = {2, 3, 6};
-    ASSERT_FALSE(GetParam()(x.begin(), x.end(), [] (int v) -> bool {return (v % 2) == 0;}));}
+    const list<int> x = {3, 6, 7};
+    ASSERT_FALSE(GetParam()(x.begin(), x.end(), [] (int v) -> bool {return (v % 2);}));}
 
 /*
 % g++ -pedantic -std=c++11 -Wall AllOf.c++ -o AllOf -lgtest_main

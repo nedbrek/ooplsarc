@@ -7,6 +7,8 @@
 #include <cassert>  // assert
 #include <iostream> // cout, endl
 #include <list>     // list
+#include <map>      // map
+#include <set>      // set
 
 int main () {
     using namespace std;
@@ -68,6 +70,30 @@ int main () {
     assert(a[0] == 3);
     assert(a[1] == 4);
     assert(a[2] == 5);
+    }
+
+    {
+    const list<int> x = {2, 3, 4};
+          int       s = 0;
+    for (list<int>::value_type v : x)
+        s += v;
+    assert(s == 9);
+    }
+
+    {
+    const set<int> x = {2, 3, 4};
+          int      s = 0;
+    for (set<int>::value_type v : x)
+        s += v;
+    assert(s == 9);
+    }
+
+    {
+    const map<char, int> x = {{'a', 2}, {'b', 3}, {'c', 4}};
+          int      s = 0;
+    for (map<char,int>::value_type v : x)
+        s += v.second;
+    assert(s == 9);
     }
 
     cout << "Done." << endl;
