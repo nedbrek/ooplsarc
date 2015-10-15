@@ -22,6 +22,7 @@ FILES :=              \
     Consts            \
     Consts2           \
     Arrays            \
+    FunctionDefaults  \
     TypeAliases       \
     Initializations   \
     Auto

@@ -43,6 +43,7 @@ pull:
     --include "Consts.c++"                  \
     --include "Consts2.c++"                 \
     --include "Arrays.c++"                  \
+    --include "FunctionDefaults.c++"        \
     --include "TypeAliases.c++"             \
     --include "Initializations.c++"         \
     --include "Auto.c++"                    \
