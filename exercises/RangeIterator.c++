@@ -9,6 +9,18 @@
 
 #include "RangeIterator.h"
 
+/*
+#include <cstddef>  // ptrdiff_t
+#include <iterator> // input_iterator_tag
+
+    public:
+        using iterator_category = input_iterator_tag;
+        using value_type        = T;
+        using difference_type   = ptrdiff_t;
+        using pointer           = T*;
+        using reference         = T&;
+*/
+
 using namespace std;
 
 TEST(Range_Iterator_Fixture, test_1) {
