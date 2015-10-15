@@ -70,12 +70,21 @@ pull:
     --include "Transform.c++"               \
     --include "Transform.h"                 \
     --include "RangeIterator.c++"           \
+    --include "RangeIterator.h"             \
     --include "Range.c++"                   \
+    --include "Range.h"                     \
+    --include "Vector1.c++"                 \
+    --include "Vector2.c++"                 \
+    --include "Vector3.c++"                 \
+    --include "Vector4.c++"                 \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 
-#    --include "RangeIterator.h"             \
-#    --include "Range.h"                     \
+#    --include "Vector1.h"                   \
+#    --include "Vector2.h"                   \
+#    --include "Vector3.h"                   \
+#    --include "Vector4.h"                   \
+
 
 push:
 	make clean
