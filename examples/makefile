@@ -23,6 +23,8 @@ FILES :=              \
     Consts2           \
     Arrays            \
     FunctionDefaults  \
+    Friends           \
+    Conversions       \
     TypeAliases       \
     Initializations   \
     Auto

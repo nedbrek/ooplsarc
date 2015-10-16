@@ -44,6 +44,8 @@ pull:
     --include "Consts2.c++"                 \
     --include "Arrays.c++"                  \
     --include "FunctionDefaults.c++"        \
+    --include "Friends.c++"                 \
+    --include "Conversions.c++"             \
     --include "TypeAliases.c++"             \
     --include "Initializations.c++"         \
     --include "Auto.c++"                    \
