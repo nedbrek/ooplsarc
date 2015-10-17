@@ -4,7 +4,9 @@
 
 // http://www.cplusplus.com/reference/vector/vector/
 
-#include <vector> // vector
+#include <memory>    // allocator
+#include <stdexcept> // out_of_range
+#include <vector>    // vector
 
 #include "gtest/gtest.h"
 
@@ -17,11 +19,12 @@ using testing::Types;
 
 template <typename T>
 struct Vector_Fixture : Test {
-    typedef T vector_type;};
+    using vector_type    = T;
+    using allocator_type = typename vector_type::allocator_type;};
 
 typedef Types<
-               vector<int>,
-            my_vector<int>>
+               vector<int, allocator<int>>,
+            my_vector<int, allocator<int>>>
         vector_types;
 
 TYPED_TEST_CASE(Vector_Fixture, vector_types);
@@ -41,29 +44,31 @@ TYPED_TEST(Vector_Fixture, test_2) {
     x.at(1) = 2;
     ASSERT_EQ(x.at(1), 2);
     fill(x.begin(), x.end(), 4);
-    ASSERT_EQ(x.at(1), 4);}
+    ASSERT_EQ(x.at(1), 4);
+    ASSERT_THROW(x.at(3), out_of_range);}
 
 TYPED_TEST(Vector_Fixture, test_3) {
-    typedef typename TestFixture::vector_type vector_type;
+    using vector_type    = typename TestFixture::vector_type;
+    using allocator_type = typename TestFixture::allocator_type;
 
-    const vector_type x(3, 2);
+    const vector_type x(3, 2, allocator_type());
     ASSERT_EQ(x.at(1), 2);}
 
 TYPED_TEST(Vector_Fixture, test_4) {
-    typedef typename TestFixture::vector_type vector_type;
+    using vector_type = typename TestFixture::vector_type;
 
     const vector_type x(3, 4);
     const vector_type y(6, 4);
     ASSERT_TRUE(equal(x.begin(), x.end(), y.begin()));}
 
 TYPED_TEST(Vector_Fixture, test_5) {
-    typedef typename TestFixture::vector_type vector_type;
+    using vector_type = typename TestFixture::vector_type;
 
     const vector_type x(10, 2);
     const vector_type y(10, 2);
     ASSERT_TRUE(x == y);
-    ASSERT_TRUE(x <= y);
-    ASSERT_TRUE(x >= y);
     ASSERT_TRUE(!(x != y));
     ASSERT_TRUE(!(x <  y));
-    ASSERT_TRUE(!(x >  y));}
+    ASSERT_TRUE(x <= y);
+    ASSERT_TRUE(!(x >  y));
+    ASSERT_TRUE(x >= y);}
