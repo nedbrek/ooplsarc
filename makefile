@@ -44,10 +44,10 @@ pull:
     --include "Consts2.c++"                 \
     --include "Arrays.c++"                  \
     --include "FunctionDefaults.c++"        \
+    --include "Initializations.c++"         \
     --include "Friends.c++"                 \
     --include "Conversions.c++"             \
     --include "TypeAliases.c++"             \
-    --include "Initializations.c++"         \
     --include "Auto.c++"                    \
     --exclude "*"                           \
     ../../../examples/c++/ examples
@@ -84,6 +84,7 @@ pull:
     ../../../exercises/c++/ exercises
 
 #    --include "Vector1.h"                   \
+#    --include "Memory.h"                    \
 #    --include "Vector2.h"                   \
 #    --include "Vector3.h"                   \
 #    --include "Vector4.h"                   \

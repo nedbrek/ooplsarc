@@ -47,6 +47,8 @@ int main () {
     assert(j == 3);
     int k{4};
     assert(k == 4);
+    int m = {5};
+    assert(m == 5);
     }
 
     {
@@ -56,6 +58,8 @@ int main () {
     assert(&y == &y);
     A z{2};
     assert(&z == &z);
+    A t = {2};
+    assert(&t == &t);
     }
 
     {
@@ -64,13 +68,16 @@ int main () {
     assert(&y == &y);
     B z{2};
     assert(&z == &z);
+//  B t = {2};        // error: chosen constructor is explicit in copy-initialization
     }
 
     {
-//  C x = 2;         // error: no viable conversion from 'int' to 'C'
-//  C y(2);          // error: no matching constructor for initialization of 'C'
+//  C x = 2;               // error: no viable conversion from 'int' to 'C'
+//  C y(2);                // error: no matching constructor for initialization of 'C'
     C z{2};
     assert(z.size() == 1);
+    C t = {2};
+    assert(t.size() == 1);
     }
 
     {
@@ -79,6 +86,10 @@ int main () {
     assert(y.size() == 2);
     vector<int> z{2};
     assert(z.size() == 1);
+    vector<int> t = {2};
+    assert(t.size() == 1);
+    vector<int> u{2, 3, 4};
+    assert(u.size() == 3);
     }
 
     cout << "Done." << endl;

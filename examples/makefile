@@ -23,10 +23,10 @@ FILES :=              \
     Consts2           \
     Arrays            \
     FunctionDefaults  \
+    Initializations   \
     Friends           \
     Conversions       \
     TypeAliases       \
-    Initializations   \
     Auto
 
 CXX        := g++-4.8
