@@ -67,8 +67,8 @@ int main () {
     {
     h(2);
     Complex1<int> x(2);
-//  h(static_cast<int>(x)); // error: invalid static_cast from type 'Complex1<int>' to type 'int'
 //  h(x);                   // error: cannot convert 'Complex1<int>' to 'int' for argument '1' to 'void h(int)'
+//  h(static_cast<int>(x)); // error: invalid static_cast from type 'Complex1<int>' to type 'int'
     }
 
     {
