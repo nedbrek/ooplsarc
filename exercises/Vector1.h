@@ -31,8 +31,8 @@ class my_vector {
 
     public:
         explicit my_vector (size_type s = 0, const_reference v = T()) :
-                _b (s == 0 ? 0 : new T[s]),
-                _e (s == 0 ? 0 : _b + s) {
+                _b (s == 0 ? nullptr : new T[s]),
+                _e (_b + s) {
             std::fill(_b, _e, v);}
 
         ~my_vector () {
