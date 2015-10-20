@@ -23,9 +23,9 @@ FILES :=              \
     Consts2           \
     Arrays            \
     FunctionDefaults  \
-    Initializations   \
     Friends           \
     Conversions       \
+    Initializations   \
     TypeAliases       \
     Auto
 

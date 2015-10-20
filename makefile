@@ -44,9 +44,9 @@ pull:
     --include "Consts2.c++"                 \
     --include "Arrays.c++"                  \
     --include "FunctionDefaults.c++"        \
-    --include "Initializations.c++"         \
     --include "Friends.c++"                 \
     --include "Conversions.c++"             \
+    --include "Initializations.c++"         \
     --include "TypeAliases.c++"             \
     --include "Auto.c++"                    \
     --exclude "*"                           \
@@ -77,13 +77,13 @@ pull:
     --include "Range.c++"                   \
     --include "Range.h"                     \
     --include "Vector1.c++"                 \
+    --include "Vector1.h"                   \
     --include "Vector2.c++"                 \
     --include "Vector3.c++"                 \
     --include "Vector4.c++"                 \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 
-#    --include "Vector1.h"                   \
 #    --include "Memory.h"                    \
 #    --include "Vector2.h"                   \
 #    --include "Vector3.h"                   \
