@@ -79,6 +79,9 @@ pull:
     --include "Vector1.c++"                 \
     --include "Vector1.h"                   \
     --include "Vector2.c++"                 \
+    --include "Stack.c++"                   \
+    --include "Queue.c++"                   \
+    --include "PriorityQueue.c++"           \
     --include "Vector3.c++"                 \
     --include "Vector4.c++"                 \
     --exclude "*"                           \

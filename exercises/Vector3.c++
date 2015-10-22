@@ -31,7 +31,7 @@ TYPED_TEST(Vector_Fixture, test_1) {
 
     const vector_type x(10, 2);
     const vector_type y = x;
-    assert(equal(y.begin(), y.end(), x.begin()) == true);}
+    assert(x == y);}
 
 TYPED_TEST(Vector_Fixture, test_2) {
     typedef typename TestFixture::vector_type vector_type;
@@ -39,4 +39,4 @@ TYPED_TEST(Vector_Fixture, test_2) {
           vector_type x(10, 2);
     const vector_type y(20, 3);
     x = y;
-    assert(equal(y.begin(), y.end(), x.begin()) == true);}
+    assert(x == y);}

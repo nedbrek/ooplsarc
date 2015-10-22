@@ -8,7 +8,8 @@ FILES :=       \
     Fill       \
     AllOf      \
     Accumulate \
-    Transform
+    Transform  \
+    Vector1
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
