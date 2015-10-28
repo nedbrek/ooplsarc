@@ -47,6 +47,9 @@ pull:
     --include "Friends.c++"                 \
     --include "Conversions.c++"             \
     --include "Initializations.c++"         \
+    --include "FunctionOverloading.c++"     \
+    --include "FunctionGenerics.c++"        \
+    --include "FunctionSpecializations.c++" \
     --include "TypeAliases.c++"             \
     --include "Auto.c++"                    \
     --exclude "*"                           \
@@ -79,19 +82,21 @@ pull:
     --include "Vector1.c++"                 \
     --include "Vector1.h"                   \
     --include "Vector2.c++"                 \
-    --include "PriorityQueue.c++"           \
+    --include "Vector2.h"                   \
+    --include "Memory.h"                    \
+    --include "Stack.c++"                   \
+    --include "Allocator.c++"               \
+    --include "Allocator.h"                 \
     --include "Vector3.c++"                 \
     --include "Vector4.c++"                 \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 
-#    --include "Memory.h"                    \
-#    --include "Vector2.h"                   \
-    --include "Stack.c++"                   \
-    --include "Queue.c++"                   \
+#    --include "Stack.h"                     \
+#    --include "Queue.c++"                   \
+#    --include "PriorityQueue.c++"           \
 #    --include "Vector3.h"                   \
 #    --include "Vector4.h"                   \
-
 
 push:
 	make clean
