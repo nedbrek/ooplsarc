@@ -79,8 +79,6 @@ pull:
     --include "Vector1.c++"                 \
     --include "Vector1.h"                   \
     --include "Vector2.c++"                 \
-    --include "Stack.c++"                   \
-    --include "Queue.c++"                   \
     --include "PriorityQueue.c++"           \
     --include "Vector3.c++"                 \
     --include "Vector4.c++"                 \
@@ -89,6 +87,8 @@ pull:
 
 #    --include "Memory.h"                    \
 #    --include "Vector2.h"                   \
+    --include "Stack.c++"                   \
+    --include "Queue.c++"                   \
 #    --include "Vector3.h"                   \
 #    --include "Vector4.h"                   \
 
