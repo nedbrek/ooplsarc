@@ -85,6 +85,7 @@ pull:
     --include "Vector2.h"                   \
     --include "Memory.h"                    \
     --include "Stack.c++"                   \
+    --include "Stack.h"                     \
     --include "Allocator.c++"               \
     --include "Allocator.h"                 \
     --include "Vector3.c++"                 \
@@ -92,7 +93,6 @@ pull:
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 
-#    --include "Stack.h"                     \
 #    --include "Queue.c++"                   \
 #    --include "PriorityQueue.c++"           \
 #    --include "Vector3.h"                   \
