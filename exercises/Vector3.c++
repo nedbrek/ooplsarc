@@ -32,6 +32,7 @@ TYPED_TEST(Vector_Fixture, test_1) {
 
     const vector_type x(10, 2);
     const vector_type y = x;
+    ASSERT_NE(x.begin(), y.begin());
     ASSERT_EQ(x, y);}
 
 TYPED_TEST(Vector_Fixture, test_2) {
@@ -39,11 +40,12 @@ TYPED_TEST(Vector_Fixture, test_2) {
 
           vector_type x(10, 2);
     const vector_type y = x;
+    ASSERT_NE(x.begin(), y.begin());
     ASSERT_EQ(x, y);
     const vector_type z = move(x);
     ASSERT_NE(x, y);
     ASSERT_NE(x, z);
-    ASSERT_EQ(x.size(), 0);
+    ASSERT_EQ(x.begin(), x.end());
     ASSERT_EQ(y, z);}
 
 TYPED_TEST(Vector_Fixture, test_3) {
@@ -52,6 +54,7 @@ TYPED_TEST(Vector_Fixture, test_3) {
     const vector_type x(20, 3);
           vector_type y(10, 2);
     y = x;
+    ASSERT_NE(x.begin(), y.begin());
     ASSERT_EQ(x, y);}
 
 TYPED_TEST(Vector_Fixture, test_4) {
@@ -60,10 +63,11 @@ TYPED_TEST(Vector_Fixture, test_4) {
     vector_type x(20, 3);
     vector_type y(10, 2);
     y = x;
+    ASSERT_NE(x.begin(), y.begin());
     ASSERT_EQ(x, y);
     vector_type z(10, 2);
     z = move(x);
     ASSERT_NE(x, y);
     ASSERT_NE(x, z);
-    ASSERT_EQ(x.size(), 0);
+    ASSERT_EQ(x.begin(), x.end());
     ASSERT_EQ(y, z);}
