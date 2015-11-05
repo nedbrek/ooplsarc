@@ -90,13 +90,11 @@ pull:
     --include "PriorityQueue.c++"           \
     --include "Allocator.c++"               \
     --include "Allocator.h"                 \
+    --include "Move.c++"                    \
     --include "Vector3.c++"                 \
     --include "Vector4.c++"                 \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
-
-#    --include "Vector3.h"                   \
-#    --include "Vector4.h"                   \
 
 push:
 	make clean
