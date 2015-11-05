@@ -39,9 +39,9 @@ class my_stack {
             {}
 
         // Default copy, destructor, and copy assignment.
-        // my_stack (const my_stack&);
-        // ~my_stack ();
-        // my_stack& operator = (const my_stack&);
+                  my_stack   (const my_stack&) = default;
+                  ~my_stack  ()                = default;
+        my_stack& operator = (const my_stack&) = default;
 
         bool empty () const {
             return _c.empty();}

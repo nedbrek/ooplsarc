@@ -83,6 +83,7 @@ TYPED_TEST(Vector_Fixture, test_5) {
     ASSERT_EQ(x.capacity(), 10);
     x.resize(15);
     ASSERT_EQ(x.size(),     15);
+    cout << x.capacity() << endl;
     ASSERT_GT(x.capacity(), 15);
     x.resize(50);
     ASSERT_EQ(x.size(),     50);
