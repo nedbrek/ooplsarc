@@ -74,9 +74,9 @@ int main () {
     {
     function<int (int)> f = [] (int i) -> int {return i + 1;};
     #ifdef __APPLE__
-        assert(sizeof(f) == 48);
+    assert(sizeof(f) == 48);
     #else
-        assert(sizeof(f) == 32);
+    assert(sizeof(f) == 32);
     #endif
     }
 

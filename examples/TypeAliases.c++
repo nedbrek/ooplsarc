@@ -12,16 +12,7 @@
 using namespace std;
 
 template <typename T>
-struct my_stack_1 {
-    typedef stack<T, deque<T>> type;};
-
-template <typename T>
-using my_stack_2 = stack<T, deque<T>>;
-
-
-
-template <typename T>
-class My_Stack {
+class My_Container {
     private:
         stack<T, deque<T>> _x;
 
@@ -29,8 +20,14 @@ class My_Stack {
         int size () const {
             return _x.size();}};
 
+
+
 template <typename T>
-class My_Stack_1 {
+struct my_stack_1 {
+    typedef stack<T, deque<T>> type;};
+
+template <typename T>
+class My_Container_1 {
     private:
         typename my_stack_1<T>::type _x;
 
@@ -38,8 +35,13 @@ class My_Stack_1 {
         int size () const {
             return _x.size();}};
 
+
+
 template <typename T>
-class My_Stack_2 {
+using my_stack_2 = stack<T, deque<T>>;
+
+template <typename T>
+class My_Container_2 {
     private:
         my_stack_2<T> _x;
 
@@ -51,34 +53,17 @@ int main () {
     cout << "TypeAliases.c++" << endl;
 
     {
-    stack<int, deque<int>> x;
+    My_Container<int> x;
     assert(x.size() == 0);
     }
 
     {
-    my_stack_1<int>::type x;
+    My_Container_1<int> x;
     assert(x.size() == 0);
     }
 
     {
-    my_stack_2<int> x;
-    assert(x.size() == 0);
-    }
-
-
-
-    {
-    My_Stack<int> x;
-    assert(x.size() == 0);
-    }
-
-    {
-    My_Stack_1<int> x;
-    assert(x.size() == 0);
-    }
-
-    {
-    My_Stack_2<int> x;
+    My_Container_2<int> x;
     assert(x.size() == 0);
     }
 

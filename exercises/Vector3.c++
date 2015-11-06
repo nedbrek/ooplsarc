@@ -18,7 +18,7 @@ using testing::Types;
 
 template <typename T>
 struct Vector_Fixture : Test {
-    typedef T vector_type;};
+    using vector_type = T;};
 
 typedef Types<
                vector<int>,
@@ -28,7 +28,7 @@ typedef Types<
 TYPED_TEST_CASE(Vector_Fixture, vector_types);
 
 TYPED_TEST(Vector_Fixture, test_1) {
-    typedef typename TestFixture::vector_type vector_type;
+    using vector_type = typename TestFixture::vector_type;
 
     const vector_type x(10, 2);
     const vector_type y = x;
@@ -36,7 +36,7 @@ TYPED_TEST(Vector_Fixture, test_1) {
     ASSERT_EQ(x, y);}
 
 TYPED_TEST(Vector_Fixture, test_2) {
-    typedef typename TestFixture::vector_type vector_type;
+    using vector_type = typename TestFixture::vector_type;
 
           vector_type x(10, 2);
     const vector_type y = x;
@@ -49,7 +49,7 @@ TYPED_TEST(Vector_Fixture, test_2) {
     ASSERT_EQ(y, z);}
 
 TYPED_TEST(Vector_Fixture, test_3) {
-    typedef typename TestFixture::vector_type vector_type;
+    using vector_type = typename TestFixture::vector_type;
 
     const vector_type x(20, 3);
           vector_type y(10, 2);
@@ -58,7 +58,7 @@ TYPED_TEST(Vector_Fixture, test_3) {
     ASSERT_EQ(x, y);}
 
 TYPED_TEST(Vector_Fixture, test_4) {
-    typedef typename TestFixture::vector_type vector_type;
+    using vector_type = typename TestFixture::vector_type;
 
     vector_type x(20, 3);
     vector_type y(10, 2);
