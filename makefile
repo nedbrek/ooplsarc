@@ -92,6 +92,7 @@ pull:
     --include "Allocator.c++"               \
     --include "Allocator.h"                 \
     --include "Move.c++"                    \
+    --include "Move.h"                      \
     --include "Vector3.c++"                 \
     --include "Vector4.c++"                 \
     --exclude "*"                           \
