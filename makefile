@@ -94,6 +94,7 @@ pull:
     --include "Move.c++"                    \
     --include "Move.h"                      \
     --include "Vector3.c++"                 \
+    --include "Vector3.h"                   \
     --include "Vector4.c++"                 \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
