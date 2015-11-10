@@ -50,6 +50,7 @@ pull:
     --include "FunctionOverloading.c++"     \
     --include "FunctionGenerics.c++"        \
     --include "FunctionSpecializations.c++" \
+    --include "Sequences.c++"               \
     --include "TypeAliases.c++"             \
     --include "Auto.c++"                    \
     --exclude "*"                           \

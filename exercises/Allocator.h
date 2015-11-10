@@ -35,12 +35,12 @@ struct My_Allocator {
     friend bool operator != (const My_Allocator&, const My_Allocator&) {
         return false;}
 
-                  My_Allocator  ()                     = default;
-                  My_Allocator  (const My_Allocator&)  = default;
-                  My_Allocator  (      My_Allocator&&) = default;
-                  ~My_Allocator ()                     = default;
-    My_Allocator& operator =    (const My_Allocator&)  = default;
-    My_Allocator& operator =    (      My_Allocator&&) = default;
+    My_Allocator             ()                     = default;
+    My_Allocator             (const My_Allocator&)  = default;
+    My_Allocator             (      My_Allocator&&) = default;
+    ~My_Allocator            ()                     = default;
+    My_Allocator& operator = (const My_Allocator&)  = default;
+    My_Allocator& operator = (      My_Allocator&&) = default;
 
     pointer allocate (size_type n) {
         return static_cast<pointer>(operator new(n * sizeof(value_type)));}

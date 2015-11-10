@@ -29,6 +29,7 @@ FILES :=                    \
     FunctionOverloading     \
     FunctionGenerics        \
     FunctionSpecializations \
+    Sequences               \
     TypeAliases             \
     Auto
 
