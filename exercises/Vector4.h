@@ -155,14 +155,14 @@ class my_vector {
             return const_cast<my_vector&>(*this).begin();}
 
         size_type capacity () const {
-            return empty() ? 0 : _l - _b;}
+            return begin() == nullptr ? 0 : _l - _b;}
 
         void clear () {
             resize(0);
             assert(valid());}
 
         bool empty () const {
-            return begin() == nullptr;}
+            return size() == 0;}
 
         iterator end () {
             return _e;}
@@ -209,7 +209,7 @@ class my_vector {
             assert(valid());}
 
         size_type size () const {
-            return empty() ? 0 : end() - begin();}
+            return begin() == nullptr ? 0 : _e - _b;}
 
         void swap (my_vector& rhs) {
             if (_a == rhs._a) {

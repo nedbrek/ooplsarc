@@ -11,7 +11,8 @@ FILES :=       \
     Transform  \
     Vector1    \
     Vector2    \
-    Vector3
+    Vector3    \
+    Vector4
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
