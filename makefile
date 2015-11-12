@@ -51,6 +51,8 @@ pull:
     --include "FunctionGenerics.c++"        \
     --include "FunctionSpecializations.c++" \
     --include "Sequences.c++"               \
+    --include "Sets.c++"                    \
+    --include "Maps.c++"                    \
     --include "TypeAliases.c++"             \
     --include "Auto.c++"                    \
     --exclude "*"                           \
