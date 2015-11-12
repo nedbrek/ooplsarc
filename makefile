@@ -98,6 +98,7 @@ pull:
     --include "Vector3.c++"                 \
     --include "Vector3.h"                   \
     --include "Vector4.c++"                 \
+    --include "Vector4.h"                   \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 
