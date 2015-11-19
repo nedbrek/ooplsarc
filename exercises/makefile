@@ -1,13 +1,14 @@
 FILES :=       \
+    Accumulate \
+    AllOf      \
+    Copy       \
+    Incr       \
     IsPrime1   \
     IsPrime2   \
-    StrCmp     \
-    Incr       \
     Equal      \
-    Copy       \
     Fill       \
-    AllOf      \
-    Accumulate \
+    Shapes1    \
+    StrCmp     \
     Transform  \
     Vector1    \
     Vector2    \
@@ -21,13 +22,18 @@ FILES :=       \
     SharedPtr
 
 CXX        := g++-4.8
-CXXFLAGS   := -pedantic -std=c++11 -Wall
+CXXFLAGS   += -pedantic -std=c++11 -Wall -MP -MMD
 LDFLAGS    := -lgtest -lgtest_main -pthread
 GCOV       := gcov-4.8
 GCOVFLAGS  := -fprofile-arcs -ftest-coverage
 GPROF      := gprof
 GPROFFLAGS := -pg
 VALGRIND   := valgrind
+DEP := $(addsuffix .d, $(FILES))
+
+all: StrCmp
+
+-include $(DEP)
 
 %.appx: %.c++
 	$(CXX) $(CXXFLAGS) $< -o $@ $(LDFLAGS)
