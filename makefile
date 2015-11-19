@@ -55,6 +55,8 @@ pull:
     --include "Maps.c++"                    \
     --include "TypeAliases.c++"             \
     --include "Auto.c++"                    \
+    --include "MethodOverriding1.c++"       \
+    --include "MethodOverriding2.c++"       \
     --exclude "*"                           \
     ../../../examples/c++/ examples
 	@rsync -r -t -u -v --delete             \
@@ -100,6 +102,8 @@ pull:
     --include "Vector4.c++"                 \
     --include "Vector4.h"                   \
     --include "Shapes1.c++"                 \
+    --include "Shapes2.c++"                 \
+    --include "Shapes3.c++"                 \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 
