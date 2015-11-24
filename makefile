@@ -104,8 +104,11 @@ pull:
     --include "Shapes1.c++"                 \
     --include "Shapes1.h"                   \
     --include "Shapes2.c++"                 \
-    --include "Shapes2.h"                 \
+    --include "Shapes2.h"                   \
     --include "Shapes3.c++"                 \
+    --include "Handle1.c++"                 \
+    --include "Handle2.c++"                 \
+    --include "Handle3.c++"                 \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 
