@@ -106,6 +106,7 @@ pull:
     --include "Shapes2.c++"                 \
     --include "Shapes2.h"                   \
     --include "Shapes3.c++"                 \
+    --include "Shapes3.h"                   \
     --include "Shapes.h"                    \
     --include "Handle1.c++"                 \
     --include "Handle2.c++"                 \
