@@ -24,8 +24,7 @@ TEST(Handle_Fixture, test_1) {
         const Circle& r = dynamic_cast<const Circle&>(x.operator*());
         ASSERT_EQ(4, r.radius());}
     catch (const bad_cast& e) {
-        assert(false);}
-    }
+        assert(false);}}
 
 TEST(Handle_Fixture, test_2) {
     Shape x = new Circle(2, 3, 4);
@@ -39,8 +38,7 @@ TEST(Handle_Fixture, test_2) {
         const Circle& r = dynamic_cast<const Circle&>(x.operator*());
         ASSERT_EQ(4, r.radius());}
     catch (const bad_cast& e) {
-        assert(false);}
-    }
+        assert(false);}}
 
 TEST(Handle_Fixture, test_3) {
     const Shape x = new Circle(2, 3, 4);
