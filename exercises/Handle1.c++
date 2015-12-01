@@ -30,14 +30,14 @@ struct Shape : Handle<AbstractShape> {
 TEST(Handle_Fixture, test_1) {
     const Shape x = new Circle(2, 3, 4);
 //  x.move(5, 6);                         // doesn't compile
-    assert(x.area()   == (3.14 * 4 * 4));
+    assert(x.area() == (3.14 * 4 * 4));
 //  x.radius();                           // doesn't compile
     }
 
 TEST(Handle_Fixture, test_2) {
     Shape x = new Circle(2, 3, 4);
     x.move(5, 6);
-    assert(x.area()   == (3.14 * 4 * 4));
+    assert(x.area() == (3.14 * 4 * 4));
 //  x.radius();                           // doesn't compile
     }
 
