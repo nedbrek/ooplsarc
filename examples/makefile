@@ -31,7 +31,13 @@ FILES :=                    \
     FunctionSpecializations \
     Sequences               \
     TypeAliases             \
-    Auto
+    Auto                    \
+    MethodOverriding1       \
+    MethodOverriding2       \
+    LocalVariables          \
+    GlobalVariables         \
+    ClassVariables          \
+    InstanceVariables
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall

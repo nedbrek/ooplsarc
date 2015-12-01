@@ -57,6 +57,10 @@ pull:
     --include "Auto.c++"                    \
     --include "MethodOverriding1.c++"       \
     --include "MethodOverriding2.c++"       \
+    --include "LocalVariables.c++"          \
+    --include "GlobalVariables.c++"         \
+    --include "ClassVariables.c++"          \
+    --include "InstanceVariables.c++"       \
     --exclude "*"                           \
     ../../../examples/c++/ examples
 	@rsync -r -t -u -v --delete             \
@@ -111,6 +115,7 @@ pull:
     --include "Handle1.c++"                 \
     --include "Handle2.c++"                 \
     --include "Handle3.c++"                 \
+    --include "Reflection.c++"              \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises
 

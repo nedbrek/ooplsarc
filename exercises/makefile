@@ -12,7 +12,10 @@ FILES :=       \
     Vector1    \
     Vector2    \
     Vector3    \
-    Vector4
+    Vector4    \
+    Shapes1    \
+    Shapes2    \
+    Shapes3
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
