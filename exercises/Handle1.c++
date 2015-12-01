@@ -2,9 +2,6 @@
 // Handle1.c++
 // -----------
 
-#include <cassert>  // assert
-#include <iostream> // cout, endl, istream, ostream
-
 #include "gtest/gtest.h"
 
 #include "Shapes.h"
@@ -29,22 +26,26 @@ struct Shape : Handle<AbstractShape> {
 
 TEST(Handle_Fixture, test_1) {
     const Shape x = new Circle(2, 3, 4);
-//  x.move(5, 6);                         // doesn't compile
-    assert(x.area() == (3.14 * 4 * 4));
-//  x.radius();                           // doesn't compile
+//  x.move(5, 6);                        // doesn't compile
+    ASSERT_EQ(3.14 * 4 * 4, x.area());
+//  x.radius();                          // doesn't compile
     }
 
 TEST(Handle_Fixture, test_2) {
     Shape x = new Circle(2, 3, 4);
     x.move(5, 6);
-    assert(x.area() == (3.14 * 4 * 4));
-//  x.radius();                           // doesn't compile
+    ASSERT_EQ(new Circle(5, 6, 4), x);
+    ASSERT_EQ(3.14 * 4 * 4, x.area());
+//  x.radius();                        // doesn't compile
     }
 
 TEST(Handle_Fixture, test_3) {
     const Shape x = new Circle(2, 3, 4);
           Shape y = x;
+    ASSERT_EQ(x, y);
     y.move(5, 6);
+    ASSERT_EQ(new Circle(2, 3, 4), x);
+    ASSERT_EQ(new Circle(5, 6, 4), y);
     ASSERT_EQ(3.14 * 4 * 4, y.area());}
 
 TEST(Handle_Fixture, test_4) {
@@ -53,9 +54,3 @@ TEST(Handle_Fixture, test_4) {
     ASSERT_NE(x, y);
     y = x;
     ASSERT_EQ(x, y);}
-
-TEST(Handle_Fixture, test_5) {
-    Shape x = new Circle(2, 3, 4);
-    ASSERT_EQ(3.14 * 4 * 4, x.area());
-    x = new Circle(5, 6, 7);
-    ASSERT_EQ(3.14 * 7 * 7, x.area());}
