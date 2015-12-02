@@ -20,9 +20,6 @@ class Handle {
             return false;
         return (*lhs._p == *rhs._p);}
 
-    friend bool operator != (const Handle& lhs, const Handle& rhs) {
-        return !(lhs == rhs);}
-
     public:
         typedef T                 value_type;
 

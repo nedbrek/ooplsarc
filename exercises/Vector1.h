@@ -42,7 +42,7 @@ class my_vector {
             return begin()[i];}
 
         const_reference operator [] (size_type i) const {
-            return const_cast<my_vector<T>*>(this)->operator[](i);}
+            return (*const_cast<my_vector<T>*>(this))[i];}
 
         iterator begin () {
             return _b;}
