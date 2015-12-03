@@ -18,8 +18,7 @@ FILES :=       \
     Shapes3    \
     Handle1    \
     Handle2    \
-    SharedPtr  \
-    Reflection
+    SharedPtr
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
