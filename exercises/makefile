@@ -18,7 +18,6 @@ FILES :=       \
     Shapes3    \
     Handle1    \
     Handle2    \
-    Handle3    \
     SharedPtr  \
     Reflection
 

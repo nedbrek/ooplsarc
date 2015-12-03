@@ -69,7 +69,6 @@ TEST(Handle_Fixture, test_4) {
     ASSERT_NE(x, y);
     y = x;
     ASSERT_EQ(x, y);
-    ASSERT_EQ(x, y);
     ASSERT_FALSE(x.unique());
     ASSERT_EQ(2, x.use_count());
     ASSERT_FALSE(y.unique());

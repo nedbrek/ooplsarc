@@ -15,13 +15,13 @@ using namespace std::rel_ops;
 template <typename T, typename C = std::deque<T>>
 class my_stack {
     public:
-        typedef C                                         container_type;
+        using container_type  = C;
 
-        typedef typename container_type::value_type       value_type;
-        typedef typename container_type::size_type        size_type;
+        using value_type      = typename container_type::value_type;
+        using size_type       = typename container_type::size_type;
 
-        typedef typename container_type::reference        reference;
-        typedef typename container_type::const_reference  const_reference;
+        using reference       = typename container_type::reference;
+        using const_reference = typename container_type::const_reference;
 
     public:
         friend bool operator == (const my_stack& lhs, const my_stack& rhs) {
