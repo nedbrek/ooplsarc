@@ -4,6 +4,7 @@
 
 #include <cassert>  // assert
 #include <iostream> // cout, endl
+#include <utility>  // !=
 
 #include "gtest/gtest.h"
 
@@ -11,6 +12,7 @@
 #include "Handle3.h"
 
 using namespace std;
+using rel_ops::operator!=;
 
 struct Shape : Handle<AbstractShape> {
     Shape (AbstractShape* p) :

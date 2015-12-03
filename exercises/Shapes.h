@@ -5,10 +5,6 @@
 #ifndef Shapes_h
 #define Shapes_h
 
-#include <utility> // !=
-
-using std::rel_ops::operator!=;
-
 class AbstractShape {
     friend bool operator == (const AbstractShape& lhs, const AbstractShape& rhs) {
         return lhs.equals(rhs);}

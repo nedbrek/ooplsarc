@@ -197,8 +197,9 @@ class my_vector {
                 return;
             if (s < size())
                 _e = my_destroy(_a, begin() + s, end());
-            else if (s <= capacity())
-                _e = my_uninitialized_fill(_a, end(), begin() + s, v);
+            else if (s <= capacity()) {
+                my_uninitialized_fill(_a, end(), begin() + s, v);
+                _e = begin() + s;}
             else {
                 #ifdef __APPLE__
                 reserve(std::max(2 * capacity(), s));

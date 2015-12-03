@@ -15,7 +15,12 @@ FILES :=       \
     Vector4    \
     Shapes1    \
     Shapes2    \
-    Shapes3
+    Shapes3    \
+    Handle1    \
+    Handle2    \
+    Handle3    \
+    SharedPtr  \
+    Reflection
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall

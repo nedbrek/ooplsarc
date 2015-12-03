@@ -6,10 +6,8 @@
 #define Handle2_h
 
 #include <algorithm> // swap
-#include <utility>   // !=
 
 using namespace std;
-using rel_ops::operator!=;
 
 template <typename T>
 class Handle {

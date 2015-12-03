@@ -117,6 +117,7 @@ pull:
     --include "Handle2.c++"                 \
     --include "Handle2.h"                   \
     --include "Handle3.c++"                 \
+    --include "SharedPtr.c++"               \
     --include "Reflection.c++"              \
     --exclude "*"                           \
     ../../../exercises/c++/ exercises

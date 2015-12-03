@@ -26,7 +26,7 @@ BI my_uninitialized_copy (A& a, II b, II e, BI x) {
     return x;}
 
 template <typename A, typename BI, typename U>
-BI my_uninitialized_fill (A& a, BI b, BI e, const U& v) {
+void my_uninitialized_fill (A& a, BI b, BI e, const U& v) {
     BI p = b;
     try {
         while (b != e) {
@@ -34,7 +34,6 @@ BI my_uninitialized_fill (A& a, BI b, BI e, const U& v) {
             ++b;}}
     catch (...) {
         my_destroy(a, p, b);
-        throw;}
-    return e;}
+        throw;}}
 
 #endif // Memory_h

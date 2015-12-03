@@ -3,11 +3,13 @@
 // -----------
 
 #include "gtest/gtest.h"
+#include <utility>       // !=
 
 #include "Shapes.h"
 #include "Handle1.h"
 
 using namespace std;
+using rel_ops::operator!=;
 
 struct Shape : Handle<AbstractShape> {
     Shape (AbstractShape* p) :

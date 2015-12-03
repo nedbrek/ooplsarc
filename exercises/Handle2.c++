@@ -3,6 +3,7 @@
 // -----------
 
 #include <typeinfo> // bad_cast
+#include <utility>  // !=
 
 #include "gtest/gtest.h"
 
@@ -10,6 +11,7 @@
 #include "Handle2.h"
 
 using namespace std;
+using rel_ops::operator!=;
 
 typedef Handle<AbstractShape> Shape;
 
