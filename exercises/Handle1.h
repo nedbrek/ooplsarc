@@ -12,11 +12,11 @@ using namespace std;
 template <typename T>
 class Handle {
     friend bool operator == (const Handle& lhs, const Handle& rhs) {
-        if (!lhs._p && !rhs._p)
+        if (!lhs.get() && !rhs.get())
             return true;
-        if (!lhs._p || !rhs._p)
+        if (!lhs.get() || !rhs.get())
             return false;
-        return (*lhs._p == *rhs._p);}
+        return (*lhs.get() == *rhs.get());}
 
     public:
         typedef T                 value_type;
